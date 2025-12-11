@@ -3,9 +3,9 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Funktioner", href: "#funktioner" },
-  { label: "Målgrupper", href: "#malgrupper" },
-  { label: "Kontakt", href: "#kontakt" },
+  { label: "Funktioner", href: "/funktioner" },
+  { label: "Målgrupper", href: "/#malgrupper" },
+  { label: "Kontakt", href: "/#kontakt" },
 ];
 
 export const Header = () => {
