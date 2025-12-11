@@ -22,7 +22,11 @@ import {
   FileCheck,
   Users,
   Truck,
-  LayoutGrid
+  LayoutGrid,
+  PiggyBank,
+  LineChart,
+  CalendarRange,
+  Globe
 } from "lucide-react";
 
 const projectPhases = [
@@ -279,8 +283,135 @@ const Funktioner = () => {
           </div>
         </section>
 
+        {/* Contract Database - Special Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-sm text-primary font-medium mb-4">
+                Avtalsdatabas
+              </div>
+              <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
+                Järnkoll på alla hyresavtal
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Perfekt för alla som vill ha full kontroll över sina hyresavtal och enkelt kunna ta ut 
+                relevanta KPI:er för sin organisation. Att ha kontroll över sina hyresavtal sparar pengar.
+              </p>
+            </div>
+
+            {/* Contract Database Features */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+              <div className="bg-card rounded-xl border border-border p-6 hover:shadow-card transition-shadow group">
+                <div className="w-12 h-12 rounded-lg gradient-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <BarChart3 className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h4 className="font-semibold text-foreground mb-2">KPI:er för organisationen</h4>
+                <p className="text-sm text-muted-foreground">
+                  Ta enkelt ut relevanta nyckeltal – kostnad per kvadratmeter, beläggningsgrad, 
+                  hyresnivåer och mycket mer.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl border border-border p-6 hover:shadow-card transition-shadow group">
+                <div className="w-12 h-12 rounded-lg gradient-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <LineChart className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h4 className="font-semibold text-foreground mb-2">Kostnadsprognoser</h4>
+                <p className="text-sm text-muted-foreground">
+                  Se in i framtiden med detaljerade kostnadsprognoser. Planera budget och 
+                  förbered för kommande förändringar.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl border border-border p-6 hover:shadow-card transition-shadow group">
+                <div className="w-12 h-12 rounded-lg gradient-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <CalendarRange className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h4 className="font-semibold text-foreground mb-2">Lokalförsörjningsprognoser</h4>
+                <p className="text-sm text-muted-foreground">
+                  Planera framtida lokalbehov med prognosverktyg som hjälper dig förutse 
+                  och förbereda för organisationens utveckling.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl border border-border p-6 hover:shadow-card transition-shadow group">
+                <div className="w-12 h-12 rounded-lg gradient-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <PiggyBank className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h4 className="font-semibold text-foreground mb-2">Spara pengar</h4>
+                <p className="text-sm text-muted-foreground">
+                  Kontroll över avtalen = kontroll över kostnaderna. Identifiera 
+                  besparingsmöjligheter och optimera era lokalkostnader.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl border border-border p-6 hover:shadow-card transition-shadow group">
+                <div className="w-12 h-12 rounded-lg gradient-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Globe className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h4 className="font-semibold text-foreground mb-2">Hyresdata från offentliga källor</h4>
+                <p className="text-sm text-muted-foreground">
+                  Få tillgång till hyresdata från offentliga källor på ett enkelt sätt. 
+                  Jämför era hyresnivåer med marknaden.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl border border-border p-6 hover:shadow-card transition-shadow group">
+                <div className="w-12 h-12 rounded-lg gradient-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <TrendingUp className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h4 className="font-semibold text-foreground mb-2">Nuläge och framtid</h4>
+                <p className="text-sm text-muted-foreground">
+                  Lika viktigt att ha koll på nuläget som framtiden. Få en komplett bild 
+                  av både aktuell status och framtida utveckling.
+                </p>
+              </div>
+            </div>
+
+            {/* Benefits summary */}
+            <div className="bg-card rounded-2xl border border-border p-8 md:p-12">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-semibold text-foreground mb-4">Fördelar med avtalsdatabasen</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">Full kontroll över alla hyresavtal på ett ställe</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">Enkelt uttag av relevanta KPI:er</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">Kostnads- och lokalförsörjningsprognoser</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">Tillgång till hyresdata från offentliga källor</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">Identifiera besparingsmöjligheter</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="relative">
+                  <div className="bg-secondary/50 rounded-xl p-6">
+                    <div className="w-16 h-16 rounded-xl gradient-accent flex items-center justify-center mb-4">
+                      <FileText className="w-8 h-8 text-accent-foreground" />
+                    </div>
+                    <div className="text-3xl font-bold text-accent mb-2">100% kontroll</div>
+                    <div className="text-muted-foreground">Nuläge och framtid i en plattform</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Other Features */}
-        <section className="py-20">
+        <section className="py-20 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
