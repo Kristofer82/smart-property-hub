@@ -178,7 +178,7 @@ const Funktioner = () => {
               </h2>
               <p className="text-lg text-muted-foreground">
                 En avancerad projektmodul som samordnar, strukturerar och budgeterar hela lokalutvecklingsprocessen. 
-                Perfekt för ovana beställare som behöver vägledning genom hela processen.
+                Perfekt för alla som arbetar med lokalprojekt – från erfarna projektledare till nya beställare.
               </p>
             </div>
 
@@ -241,7 +241,15 @@ const Funktioner = () => {
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground">Vägleder ovana beställare genom hela processen</span>
+                      <span className="text-foreground">Standardiserar arbetet för större organisationer</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">Vägleder nya beställare genom hela processen</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">Utökar verktygslådan för erfarna projektledare</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
@@ -249,11 +257,7 @@ const Funktioner = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground">Moderna inventeringsverktyg för effektiv dokumentation</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground">Gantt-schema för tydlig tidplanering och uppföljning</span>
+                      <span className="text-foreground">Moderna inventeringsverktyg och Gantt-schema</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
