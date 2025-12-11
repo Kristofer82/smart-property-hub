@@ -3,7 +3,8 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Funktioner", href: "/funktioner" },
+  { label: "Avtal", href: "/avtal" },
+  { label: "Projekt", href: "/projekt" },
   { label: "Målgrupper", href: "/#malgrupper" },
   { label: "Kontakt", href: "/#kontakt" },
 ];
