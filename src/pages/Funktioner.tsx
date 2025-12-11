@@ -13,8 +13,57 @@ import {
   Zap,
   Shield,
   Clock,
-  TrendingUp
+  TrendingUp,
+  GanttChart,
+  Calculator,
+  ClipboardList,
+  Building2,
+  Search,
+  FileCheck,
+  Users,
+  Truck,
+  LayoutGrid
 } from "lucide-react";
+
+const projectPhases = [
+  {
+    phase: 1,
+    title: "Projektstart och nuläge",
+    description: "Definiera projektets syfte, omfattning och ekonomiska ramar",
+    deliverables: ["Organisation", "Projektplan", "Tid- och aktivitetsplan", "Projektbudget", "Målbeskrivning", "Kommunikationsplan"],
+  },
+  {
+    phase: 2,
+    title: "Behovsanalys",
+    description: "Analysera nuvarande situation och definiera framtida lokalbehov",
+    deliverables: ["Lokalbehov och arbetssätt", "Lokalprogram", "Lokalalternativ"],
+  },
+  {
+    phase: 3,
+    title: "Hyresavtal och marknad",
+    description: "Sök och utvärdera lokalalternativ på marknaden",
+    deliverables: ["Marknadssök", "Offertutvärdering", "Hyresanalys", "Kontraktsförhandling"],
+  },
+  {
+    phase: 4,
+    title: "Genomförande",
+    description: "Planera och genomför flytten till nya lokaler",
+    deliverables: ["Checklistor", "Flyttplanering", "Hyresgästanpassningar", "Inflytt"],
+  },
+];
+
+const projectTools = [
+  { icon: GanttChart, title: "Tidplan", description: "Gantt-diagram med aktiviteter och beroenden", phase: "Fas 1" },
+  { icon: Calculator, title: "Projektbudget", description: "Investering, drift och avskrivningar", phase: "Fas 1" },
+  { icon: ClipboardList, title: "Inventering", description: "Dokumentera lokaler, möbler och utrustning", phase: "Fas 2" },
+  { icon: LayoutGrid, title: "Lokalprogram", description: "Definiera framtida lokalbehov med lokalförteckning", phase: "Fas 2" },
+  { icon: Search, title: "Lokalsökning", description: "Hitta och utvärdera lokaler på marknaden", phase: "Fas 3" },
+  { icon: FileCheck, title: "Offertutvärdering", description: "Jämför hyresalternativ med NPV och TCO", phase: "Fas 3" },
+  { icon: BarChart3, title: "Hyresanalys", description: "Analysera från fastighetsägarens perspektiv", phase: "Fas 3" },
+  { icon: CheckCircle2, title: "Checklistor", description: "Checklistor för flytt, IT och överlämning", phase: "Fas 4" },
+  { icon: Truck, title: "Flyttplanering", description: "Visuell tidslinje för flyttaktiviteter", phase: "Fas 4" },
+  { icon: Users, title: "Samverkan", description: "Team, meddelanden, organisation och kontakter", phase: "Fas 1" },
+];
 
 const features = [
   {
@@ -42,19 +91,6 @@ const features = [
       "Sökbar arkivering av alla dokument",
     ],
     highlight: "100% spårbarhet",
-  },
-  {
-    icon: Layers,
-    title: "Projektmodul",
-    subtitle: "Strukturerad projekthantering",
-    description: "En dedikerad modul för lokalutvecklingsprocesser som ger er full kontroll över projekt från start till mål.",
-    benefits: [
-      "Visuell projektöversikt med milstolpar",
-      "Resursplanering och budgetuppföljning",
-      "Dokumenthantering kopplad till projekt",
-      "Samarbetsfunktioner för projektteam",
-    ],
-    highlight: "Strukturerad process",
   },
   {
     icon: Map,
@@ -130,9 +166,126 @@ const Funktioner = () => {
           </div>
         </section>
 
-        {/* Detailed Features */}
+        {/* Project Module - Special Section */}
+        <section className="py-20 bg-secondary/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 rounded-full text-sm text-accent font-medium mb-4">
+                Specialiserad projektmodul
+              </div>
+              <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
+                Projektmodul för kommersiella hyresgäster
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                En avancerad projektmodul som samordnar, strukturerar och budgeterar hela lokalutvecklingsprocessen. 
+                Perfekt för ovana beställare som behöver vägledning genom hela processen.
+              </p>
+            </div>
+
+            {/* Project Phases */}
+            <div className="mb-16">
+              <h3 className="text-xl font-semibold text-foreground mb-8 text-center">Projektfaser</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {projectPhases.map((phase) => (
+                  <div key={phase.phase} className="bg-card rounded-xl border border-border p-6 hover:shadow-card transition-shadow">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-full gradient-accent flex items-center justify-center text-accent-foreground font-bold">
+                        {phase.phase}
+                      </div>
+                      <h4 className="font-semibold text-foreground">{phase.title}</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">{phase.description}</p>
+                    <div>
+                      <p className="text-xs font-medium text-muted-foreground mb-2">Leverabler:</p>
+                      <ul className="space-y-1">
+                        {phase.deliverables.map((item) => (
+                          <li key={item} className="text-sm text-foreground flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 bg-accent rounded-full" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Project Tools */}
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Projektverktyg</h3>
+              <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
+                Välj ett verktyg för att arbeta med projektet. Verktygen kan användas genom alla faser.
+              </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {projectTools.map((tool) => (
+                  <div key={tool.title} className="bg-card rounded-xl border border-border p-5 hover:border-accent/30 hover:shadow-card transition-all group">
+                    <div className="w-10 h-10 rounded-lg gradient-accent flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                      <tool.icon className="w-5 h-5 text-accent-foreground" />
+                    </div>
+                    <h4 className="font-semibold text-foreground mb-1">{tool.title}</h4>
+                    <p className="text-sm text-muted-foreground mb-3">{tool.description}</p>
+                    <span className="inline-block px-2 py-0.5 bg-primary/10 text-primary text-xs font-medium rounded">
+                      {tool.phase}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Benefits */}
+            <div className="mt-16 bg-card rounded-2xl border border-border p-8 md:p-12">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-semibold text-foreground mb-4">Fördelar med projektmodulen</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">Vägleder ovana beställare genom hela processen</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">Hjälper till att ställa korrekta krav på leverantörer</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">Moderna inventeringsverktyg för effektiv dokumentation</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">Gantt-schema för tydlig tidplanering och uppföljning</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">Samordnar alla projektdeltagare på ett ställe</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="relative">
+                  <div className="bg-secondary/50 rounded-xl p-6">
+                    <div className="w-16 h-16 rounded-xl gradient-accent flex items-center justify-center mb-4">
+                      <Layers className="w-8 h-8 text-accent-foreground" />
+                    </div>
+                    <div className="text-3xl font-bold text-accent mb-2">4 faser</div>
+                    <div className="text-muted-foreground">10+ specialiserade verktyg</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Other Features */}
         <section className="py-20">
           <div className="container mx-auto px-4">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
+                Övriga funktioner
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Kraftfulla verktyg för avtalshantering och fastighetsförvaltning.
+              </p>
+            </div>
             <div className="space-y-24">
               {features.map((feature, index) => (
                 <div 
