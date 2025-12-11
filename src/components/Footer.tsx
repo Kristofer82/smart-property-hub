@@ -11,13 +11,13 @@ export const Footer = () => {
           </div>
 
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <a href="#funktioner" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+            <a href="/funktioner" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
               Funktioner
             </a>
-            <a href="#malgrupper" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+            <a href="/#malgrupper" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
               Målgrupper
             </a>
-            <a href="#kontakt" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+            <a href="/#kontakt" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
               Kontakt
             </a>
           </nav>
